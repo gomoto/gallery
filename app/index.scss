@@ -16,25 +16,6 @@ $black: rgba(0,0,0,0.87);
   color: $black;
 }
 
-.gallery {
-  @include column-count(2);
-  @include column-gap($photo-space);
-  max-width: $max-width;
-  margin: 0 auto;
-}
-
-@media (min-width: 480px) {
-  .gallery {
-    @include column-count(3);
-  }
-}
-@media (min-width: 735px) {
-  .gallery {
-    @include column-gap($photo-space-lg);
-    padding: $photo-space-lg;
-    padding-bottom: 0;
-  }
-}
-
+@import 'Gallery/Gallery';
 @import 'Loader/Loader';
 @import 'Photo/Photo';
