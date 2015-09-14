@@ -23,9 +23,7 @@
     ]
   },
   "literalify": {
-    "classnames": "window.classnames",
-    "react": "window.React",
-    "reqwest": "window.reqwest"
+    "react": "window.React"
   },
   "dependencies": {
     "classnames": "^2.1.3",
