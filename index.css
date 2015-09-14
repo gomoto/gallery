@@ -1,0 +1,284 @@
+/* line 5, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 12, app/index.scss */
+#app {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* line 1, app/Gallery/_Gallery.scss */
+.gallery {
+  -moz-column-count: 2;
+  -webkit-column-count: 2;
+  column-count: 2;
+  -moz-column-gap: 3px;
+  -webkit-column-gap: 3px;
+  column-gap: 3px;
+  max-width: 990px;
+  margin: 0 auto;
+}
+
+@media (min-width: 480px) {
+  /* line 9, app/Gallery/_Gallery.scss */
+  .gallery {
+    -moz-column-count: 3;
+    -webkit-column-count: 3;
+    column-count: 3;
+  }
+}
+@media (min-width: 735px) {
+  /* line 15, app/Gallery/_Gallery.scss */
+  .gallery {
+    -moz-column-gap: 30px;
+    -webkit-column-gap: 30px;
+    column-gap: 30px;
+    padding: 30px;
+    padding-bottom: 0;
+  }
+}
+/*
+ *  Usage:
+ *
+ *    <div class="sk-cube-grid">
+ *      <div class="sk-cube sk-cube1"></div>
+ *      <div class="sk-cube sk-cube2"></div>
+ *      <div class="sk-cube sk-cube3"></div>
+ *      <div class="sk-cube sk-cube4"></div>
+ *      <div class="sk-cube sk-cube5"></div>
+ *      <div class="sk-cube sk-cube6"></div>
+ *      <div class="sk-cube sk-cube7"></div>
+ *      <div class="sk-cube sk-cube8"></div>
+ *      <div class="sk-cube sk-cube9"></div>
+ *    </div>
+ *
+ */
+/* line 19, node_modules/spinkit/scss/spinners/9-cube-grid.scss */
+.sk-cube-grid {
+  width: 60px;
+  height: 60px;
+  margin: 0;
+  /*
+   * Spinner positions
+   * 1 2 3
+   * 4 5 6
+   * 7 8 9
+   */
+}
+/* line 26, node_modules/spinkit/scss/spinners/9-cube-grid.scss */
+.sk-cube-grid .sk-cube {
+  width: 33%;
+  height: 33%;
+  background-color: #fdfdfd;
+  float: left;
+  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+/* line 41, node_modules/spinkit/scss/spinners/9-cube-grid.scss */
+.sk-cube-grid .sk-cube1 {
+  animation-delay: 0.2s;
+}
+/* line 42, node_modules/spinkit/scss/spinners/9-cube-grid.scss */
+.sk-cube-grid .sk-cube2 {
+  animation-delay: 0.3s;
+}
+/* line 43, node_modules/spinkit/scss/spinners/9-cube-grid.scss */
+.sk-cube-grid .sk-cube3 {
+  animation-delay: 0.4s;
+}
+/* line 44, node_modules/spinkit/scss/spinners/9-cube-grid.scss */
+.sk-cube-grid .sk-cube4 {
+  animation-delay: 0.1s;
+}
+/* line 45, node_modules/spinkit/scss/spinners/9-cube-grid.scss */
+.sk-cube-grid .sk-cube5 {
+  animation-delay: 0.2s;
+}
+/* line 46, node_modules/spinkit/scss/spinners/9-cube-grid.scss */
+.sk-cube-grid .sk-cube6 {
+  animation-delay: 0.3s;
+}
+/* line 47, node_modules/spinkit/scss/spinners/9-cube-grid.scss */
+.sk-cube-grid .sk-cube7 {
+  animation-delay: 0s;
+}
+/* line 48, node_modules/spinkit/scss/spinners/9-cube-grid.scss */
+.sk-cube-grid .sk-cube8 {
+  animation-delay: 0.1s;
+}
+/* line 49, node_modules/spinkit/scss/spinners/9-cube-grid.scss */
+.sk-cube-grid .sk-cube9 {
+  animation-delay: 0.2s;
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%, 70%, 100% {
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    transform: scale3D(0, 0, 1);
+  }
+}
+/* line 6, app/Loader/_Loader.scss */
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.87);
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* line 4, app/Photo/_Photo.scss */
+.photo.active {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.87);
+  overflow: auto;
+}
+
+/* line 15, app/Photo/_Photo.scss */
+.photo-content {
+  background: #fdfdfd;
+  margin: 0;
+  max-width: 990px;
+  width: 100%;
+  *zoom: 1;
+}
+/* line 38, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/general/_clearfix.scss */
+.photo-content:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 21, app/Photo/_Photo.scss */
+.photo.active .photo-content {
+  margin: 40px auto;
+}
+
+/* line 26, app/Photo/_Photo.scss */
+.picture {
+  cursor: pointer;
+  margin-bottom: 3px;
+  vertical-align: top;
+  /*prevent unwanted vertical gaps*/
+  width: 100%;
+}
+/* line 31, app/Photo/_Photo.scss */
+.photo.active .picture {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  width: auto;
+}
+/* line 37, app/Photo/_Photo.scss */
+.picture.filler {
+  display: none;
+}
+/* line 39, app/Photo/_Photo.scss */
+.picture.filler.active {
+  display: block;
+}
+
+/* line 45, app/Photo/_Photo.scss */
+.caption {
+  display: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+  padding: 16px;
+  overflow: hidden;
+}
+/* line 50, app/Photo/_Photo.scss */
+.photo.active .caption {
+  display: block;
+}
+
+@media (min-width: 435px) {
+  /* line 56, app/Photo/_Photo.scss */
+  .photo.active {
+    padding: 0 40px;
+  }
+}
+@media (min-width: 735px) {
+  /* line 62, app/Photo/_Photo.scss */
+  .picture {
+    margin-bottom: 30px;
+  }
+}
+@media (min-width: 830px) {
+  /* line 69, app/Photo/_Photo.scss */
+  .photo.active .picture {
+    float: left;
+  }
+}
