@@ -2,16 +2,21 @@ var React = require('react');
 var reqwest = require('reqwest');
 
 var Photo = require('./Photo/Photo.jsx');
+var Loader = require('./Loader/Loader.jsx');
 
 var Gallery = React.createClass({
   getInitialState: function() {
     return {
       photos: [],
-      activePhoto: null
+      photosLoaded: [],
+      activePhoto: null,
+      loaded: false
     };
   },
 
   componentDidMount: function() {
+    this.freezeGallery(true);
+
     var component = this;
 
     reqwest({
@@ -35,14 +40,43 @@ var Gallery = React.createClass({
       this.setState({
         activePhoto: null
       }, function() {
-        document.body.style.overflow = 'visible';
+        this.freezeGallery(false);
       });
     } else {
       this.setState({
         activePhoto: photoId
       }, function() {
-        document.body.style.overflow = 'hidden';
+        this.freezeGallery(true);
       });
+    }
+  },
+
+  /**
+   * Track the photos that have finished loading. When all photos have loaded,
+   * hide Loading component and unfreeze gallery.
+   */
+  handlePhotoLoad: function(photoId) {
+    this.setState({
+      photosLoaded: this.state.photosLoaded.concat([photoId])
+    }, function() {
+      if (this.state.photosLoaded.length === this.state.photos.length) {
+        this.setState({
+          loaded: true
+        }, function() {
+          this.freezeGallery(false);
+        });
+      }
+    });
+  },
+
+  /**
+   * Prevent gallery scrolling by setting overflow: hidden on body.
+   */
+  freezeGallery: function(freeze) {
+    if (freeze) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'visible';
     }
   },
 
@@ -51,12 +85,14 @@ var Gallery = React.createClass({
       return <Photo photo={photo}
                     isActive={photo.id === this.state.activePhoto}
                     onClick={this.handlePhotoClick.bind(null, photo.id)}
+                    onLoad={this.handlePhotoLoad.bind(null, photo.id)}
                     key={photo.id}/>;
     }.bind(this));
 
     return (
       <div className='gallery'>
         {photos}
+        {this.state.loaded ? null : <Loader/>}
       </div>
     );
   }

@@ -3,10 +3,12 @@
 
 $photo-space: 3px;
 $photo-space-lg: 30px;
+$max-width: 990px;
 
 $white: #fdfdfd;
 $gray: rgba(0,0,0,0.12);
-$max-width: 990px;
+$black-background: rgba(0,0,0,0.9);
+
 
 .gallery {
   @include column-count(2);
@@ -20,12 +22,13 @@ $max-width: 990px;
     @include column-count(3);
   }
 }
-  .gallery {
 @media (min-width: 735px) {
+  .gallery {
     @include column-gap($photo-space-lg);
     padding: $photo-space-lg;
     padding-bottom: 0;
   }
 }
 
+@import 'Loader/Loader';
 @import 'Photo/Photo';

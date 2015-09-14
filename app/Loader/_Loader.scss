@@ -1,0 +1,16 @@
+$spinkit-size: 60px;
+$spinkit-spinner-color: $white;
+$spinkit-spinner-margin: 0;
+@import '../node_modules/spinkit/scss/spinners/9-cube-grid';
+
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: $black-background;
+  @include display-flex(flex);
+  @include justify-content(center);
+  @include align-items(center);
+}

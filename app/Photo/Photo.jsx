@@ -26,7 +26,8 @@ var Photo = React.createClass({
             <img className='picture'
                  src={this.props.photo.picture}
                  alt={this.props.photo.text}
-                 onClick={this.props.onClick}/>
+                 onClick={this.props.onClick}
+                 onLoad={this.props.onLoad}/>
             <p className='caption'>{this.props.photo.text}</p>
           </div>
         </div>
