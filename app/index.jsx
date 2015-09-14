@@ -29,11 +29,11 @@ var Gallery = React.createClass({
 
   render: function() {
     var photos = this.state.photos.map(function(photo) {
-      return <img photoId={photo.id} src={photo.picture} alt={photo.text}/>;
+      return <img className="photo" photoId={photo.id} src={photo.picture} alt={photo.text}/>;
     });
 
     return (
-      <div>
+      <div className="gallery">
         {photos}
       </div>
     );
