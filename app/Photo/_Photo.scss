@@ -42,7 +42,6 @@ $photo-space-active: 40px;
   }
 }
 
-
 .caption {
   display: none;
   border-top: 1px solid $gray;
@@ -53,17 +52,18 @@ $photo-space-active: 40px;
   }
 }
 
-
 @media (min-width: 435px) {
   .photo.active {
     padding: 0 $photo-space-active;
   }
 }
+
 @media (min-width: 735px) {
   .picture {
     margin-bottom: $photo-space-lg;
   }
 }
+
 @media (min-width: 830px) {
   .picture {
     .photo.active & {
