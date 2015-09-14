@@ -23,7 +23,8 @@
     ]
   },
   "literalify": {
-    "react": "window.React"
+    "react": "window.React",
+    "reqwest": "window.reqwest"
   },
   "dependencies": {
     "react": "^0.13.3"
@@ -32,6 +33,7 @@
     "browserify": "^11.1.0",
     "literalify": "^0.4.0",
     "reactify": "^1.1.1",
+    "reqwest": "^2.0.3",
     "watchify": "^3.4.0"
   }
 }
