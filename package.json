@@ -1,0 +1,37 @@
+{
+  "name": "gallery",
+  "version": "0.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build:jsx": "browserify ./app/index.jsx -o ./index.js",
+    "build:scss": "compass compile",
+    "watch:jsx": "watchify ./app/index.jsx -o ./index.js -v",
+    "watch:scss": "compass watch",
+    "build": "npm run build:jsx & npm run build:scss",
+    "watch": "npm run watch:jsx & npm run watch:scss",
+    "clean": "rm -rf ./index.js && rm -rf ./index.css"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "reactify",
+        {
+          "es6": true
+        }
+      ],
+      "literalify"
+    ]
+  },
+  "literalify": {
+    "react": "window.React"
+  },
+  "dependencies": {
+    "react": "^0.13.3"
+  },
+  "devDependencies": {
+    "browserify": "^11.1.0",
+    "literalify": "^0.4.0",
+    "reactify": "^1.1.1",
+    "watchify": "^3.4.0"
+  }
+}
