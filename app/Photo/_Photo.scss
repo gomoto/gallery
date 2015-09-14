@@ -1,3 +1,5 @@
+$photo-space-active: 40px;
+
 .photo {
   &.active {
     position: fixed;
@@ -5,8 +7,6 @@
     right: 0;
     bottom: 0;
     left: 0;
-    padding-top: 40px;
-    padding-bottom: 40px;
     background: $black-background;
     overflow: auto;
   }
@@ -14,10 +14,13 @@
 
 .photo-content {
   background: $white;
-  margin: 0 auto;
+  margin: 0;
   max-width: $max-width;
   width: 100%;
   @include pie-clearfix;
+  .photo.active & {
+    margin: $photo-space-active auto;
+  }
 }
 
 .picture {
@@ -53,7 +56,7 @@
 
 @media (min-width: 435px) {
   .photo.active {
-    padding: 40px;
+    padding: 0 $photo-space-active;
   }
 }
 @media (min-width: 735px) {
