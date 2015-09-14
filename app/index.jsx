@@ -1,6 +1,7 @@
 var React = require('react');
 var reqwest = require('reqwest');
-var classNames = require('classnames');
+
+var Photo = require('./Photo/Photo.jsx');
 
 var Gallery = React.createClass({
   getInitialState: function() {
@@ -43,16 +44,10 @@ var Gallery = React.createClass({
 
   render: function() {
     var photos = this.state.photos.map(function(photo) {
-      var photoClasses = classNames({
-        'photo': true,
-        'active': photo.id === this.state.activePhoto
-      });
-      return <img className={photoClasses}
-                  photoId={photo.id}
-                  src={photo.picture}
-                  alt={photo.text}
-                  onClick={this.handlePhotoClick.bind(null, photo.id)}
-                  key={photo.id}/>;
+      return <Photo photo={photo}
+                    isActive={photo.id === this.state.activePhoto}
+                    onClick={this.handlePhotoClick.bind(null, photo.id)}
+                    key={photo.id}/>;
     }.bind(this));
 
     return (

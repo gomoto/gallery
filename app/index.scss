@@ -2,6 +2,10 @@
 @import 'compass/reset';
 
 $photo-space: 3px;
+$photo-space-lg: 30px;
+
+$white: #fdfdfd;
+$gray: #cdcdcd;
 
 .gallery {
   @include column-count(2);
@@ -10,32 +14,17 @@ $photo-space: 3px;
   margin: 0 auto;
 }
 
-.photo {
-  width: 100%;
-  vertical-align: top; /*prevent unwanted vertical gaps*/
-  margin-bottom: $photo-space;
-  cursor: pointer;
-  &.active {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: auto;
-  }
-}
-
 @media (min-width: 480px) {
   .gallery {
     @include column-count(3);
   }
 }
-@media (min-width: 735px) {
-  $photo-space: 30px;
   .gallery {
-    @include column-gap($photo-space);
-    padding: $photo-space;
+@media (min-width: 735px) {
+    @include column-gap($photo-space-lg);
+    padding: $photo-space-lg;
     padding-bottom: 0;
   }
-  .photo {
-    margin-bottom: $photo-space;
-  }
 }
+
+@import 'Photo/Photo';
