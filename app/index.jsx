@@ -34,10 +34,14 @@ var Gallery = React.createClass({
     if (this.state.activePhoto === photoId) {
       this.setState({
         activePhoto: null
+      }, function() {
+        document.body.style.overflow = 'visible';
       });
     } else {
       this.setState({
         activePhoto: photoId
+      }, function() {
+        document.body.style.overflow = 'hidden';
       });
     }
   },
