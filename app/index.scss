@@ -7,8 +7,14 @@ $max-width: 990px;
 
 $white: #fdfdfd;
 $gray: rgba(0,0,0,0.12);
-$black-background: rgba(0,0,0,0.9);
+$black: rgba(0,0,0,0.87);
 
+#app {
+  font-family: Roboto, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: $black;
+}
 
 .gallery {
   @include column-count(2);
