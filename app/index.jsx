@@ -16,9 +16,11 @@ var Gallery = React.createClass({
 
   componentDidMount: function() {
     this.freezeGallery(true);
+    this.loadPhotos();
+  },
 
+  loadPhotos: function() {
     var component = this;
-
     reqwest({
       url: 'https://appsheettest1.azurewebsites.net/sample/posts',
       type: 'json',
