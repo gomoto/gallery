@@ -5,12 +5,13 @@ $photo-space: 3px;
 $photo-space-lg: 30px;
 
 $white: #fdfdfd;
-$gray: #cdcdcd;
+$gray: rgba(0,0,0,0.12);
+$max-width: 990px;
 
 .gallery {
   @include column-count(2);
   @include column-gap($photo-space);
-  max-width: 990px;
+  max-width: $max-width;
   margin: 0 auto;
 }
 

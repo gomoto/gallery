@@ -14,7 +14,10 @@
 
 .photo-content {
   background: $white;
+  margin: 0 auto;
+  max-width: $max-width;
   width: 100%;
+  @include pie-clearfix;
 }
 
 .picture {
@@ -35,19 +38,27 @@
   display: none;
   border-top: 1px solid $gray;
   padding: 16px;
-  & p {
-    margin: 0 auto;
-    min-width: 300px;
-    max-width: 600px;
-  }
+  overflow: hidden;
   .photo.active & {
     display: block;
   }
 }
 
 
+@media (min-width: 435px) {
+  .photo.active {
+    padding: 40px;
+  }
+}
 @media (min-width: 735px) {
   .picture {
     margin-bottom: $photo-space-lg;
+  }
+}
+@media (min-width: 830px) {
+  .picture {
+    .photo.active & {
+      float: left;
+    }
   }
 }

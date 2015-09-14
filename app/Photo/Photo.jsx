@@ -14,9 +14,7 @@ var Photo = React.createClass({
           <img className='picture'
                src={this.props.photo.picture}
                alt={this.props.photo.text}/>
-          <div className='caption'>
-            <p>{this.props.photo.text}</p>
-          </div>
+          <p className='caption'>{this.props.photo.text}</p>
         </div>
       </div>
     );
